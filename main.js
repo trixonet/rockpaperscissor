@@ -7,7 +7,6 @@ function start (){
     
     
     var roll = Randomizer.nextInt(1,3);
-    
     println ("Computer picks: " + roll ); 
     
     //Tie both numbers (player and computer)
