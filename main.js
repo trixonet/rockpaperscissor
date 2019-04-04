@@ -22,4 +22,3 @@ function start (){
     
     if (intro == 2 && roll )
 }
- yes
