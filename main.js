@@ -12,13 +12,26 @@ function start (){
     if (intro == roll){
         println ("TIE");
     }
-    if (intro == 3 && roll == 2){
-        println ("YOU WIN");
-    }
     
     if (intro == 1 && roll == 3){
         println ("YOU WIN");
     }
     
-    if (intro == 2 && roll )
+    if (intro == 2 && roll == 1){
+        println ("YOU WIN");
+    }
+    
+    if (intro == 3 && roll == 2){
+       println  ("YOU WIN");
+    }
+     // Bottom Section are Losing Seqeunces for the player sequences   
+    if (intro == 1 && roll == 2){
+       println  ("YOU LOSE"); 
+    }
+    if (intro == 2 && roll == 3){
+       println ("YOU LOSE");
+    }
+    if (intro == 3 && roll == 1){
+       println ("YOU LOSE"); 
+    }
 }
