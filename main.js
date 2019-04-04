@@ -16,3 +16,4 @@ function start (){
         println ("YOU WIN");
     }
 }
+ yes
