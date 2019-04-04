@@ -15,4 +15,10 @@ function start (){
     if (intro == 3 && roll == 2){
         println ("YOU WIN");
     }
+    
+    if (intro == 1 && roll == 3){
+        println ("YOU WIN");
+    }
+    
+    if (intro == 2 && roll )
 }
