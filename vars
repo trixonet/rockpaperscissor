@@ -1,6 +1,5 @@
 function start(){
     var rect1 = new Rectangle (getWidth()/2 , getHeight()/2);
-    
     add(rect1);
     
     var rect2 = new Rectangle (getWidth()/2 , getHeight()/2);
