@@ -1,0 +1,15 @@
+function start(){
+    var rect1 = new Rectangle (getWidth()/2 , getHeight()/2);
+    
+    add(rect1);
+    
+    var rect2 = new Rectangle (getWidth()/2 , getHeight()/2);
+    rect2.setPosition(getWidth()/2 , getHeight() - getHeight());
+    rect2.setColor(Color.red);
+    add(rect2);
+    
+    var rect3 = new Rectangle (getWidth() , getHeight()/2);
+    rect3.setPosition(getWidth() - getWidth() , getHeight()/2);
+    rect3.setColor(Color.blue);
+    add(rect3);
+}
