@@ -1,7 +1,6 @@
 
-var dirt = new WebImage("https://codehs.com/uploads/5c5b03e5830f4a1db397f2503291cfdd");
-var fire = new WebImage("https://codehs.com/uploads/01b7bc8d1f78f61f0e107d69c68f4760");
-var water = new WebImage("https://codehs.com/uploads/229bfa3a8677c3aa6e7d165abd870547");
+var win = new WebImage("https://codehs.com/uploads/b610fd1dd2e37a79e1c7e65177ff14b5");
+var lose = new WebImage("https://codehs.com/uploads/3a2335cd0a3c0e223728c0c17efb8853");
 
 function start (){
     println ("1. Earth");
@@ -19,35 +18,60 @@ function start (){
     
     //Tie both numbers (player and computer)
     if (intro == roll){
+        gameTie();
         println ("TIE");
     }
     
     //Earth to water
     if (intro == 1 && roll == 3){
         println ("YOU WIN");
-        add(dirt);
+        add(win);
     }
     
     //Fire to earth
     if (intro == 2 && roll == 1){
         println ("YOU WIN");
+        add(win);
     }
     
     //Water to fire
     if (intro == 3 && roll == 2){
        println  ("YOU WIN");
+       add(win);
     }
     
      // Bottom Section are Losing Seqeunces for the player sequences   
     if (intro == 1 && roll == 2){
-       println  ("YOU LOSE"); 
+       println  ("YOU LOSE");
+       add(lose);
     }
     
     if (intro == 2 && roll == 3){
        println ("YOU LOSE");
+       add(lose);
     }
     
     if (intro == 3 && roll == 1){
        println ("YOU LOSE"); 
+       add(lose);
     }
+}
+
+// All functions for displaying pictures.
+// Code is very long, but can probably be simplified.
+
+function gameTie(){
+    dirt.setSize(200, 200);
+    dirt.setPosition (getWidth()/2 , getHeight()/2);
+    add(dirt);
+    
+    var rect2 = new Rectangle (getWidth()/2 , getHeight()/2);
+    rect2.setPosition(getWidth()/2 , getHeight() - getHeight());
+    rect2.setColor(Color.red);
+    add(rect2);
+    
+    var rect3 = new Rectangle (getWidth() , getHeight()/2);
+    rect3.setPosition(getWidth() - getWidth() , getHeight()/2);
+    rect3.setColor(Color.blue);
+    add(rect3);
 }
