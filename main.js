@@ -1,6 +1,18 @@
+var dirt = new WebImage("https://codehs.com/uploads/5c5b03e5830f4a1db397f2503291cfdd");
+dirt.setSize(138, 175);
+dirt.setPosition(20, 35);
 
-var win = new WebImage("https://codehs.com/uploads/b610fd1dd2e37a79e1c7e65177ff14b5");
-var lose = new WebImage("https://codehs.com/uploads/3a2335cd0a3c0e223728c0c17efb8853");
+var fire = new WebImage("https://codehs.com/uploads/01b7bc8d1f78f61f0e107d69c68f4760");
+fire.setSize(138, 175);
+fire.setPosition(0, 35);
+
+var water = new WebImage("https://codehs.com/uploads/229bfa3a8677c3aa6e7d165abd870547");
+water.setSize(110, 155);
+water.setPosition(250, 35);
+
+var vs = new WebImage ("https://codehs.com/uploads/21c7424c0aff710693860c35917a04dd");
+
+
 
 function start (){
     println ("1. Earth");
@@ -18,47 +30,23 @@ function start (){
     
     //Tie both numbers (player and computer)
     if (intro == roll){
-        gameTie();
         println ("TIE");
     }
     
     //Earth to water
     if (intro == 1 && roll == 3){
         println ("YOU WIN");
-        add(win);
+        add(dirt); 
+        remove(fire);
+        add(water);
+        
     }
     
     //Fire to earth
     if (intro == 2 && roll == 1){
         println ("YOU WIN");
-        add(win);
-    }
-    
-    //Water to fire
-    if (intro == 3 && roll == 2){
-       println  ("YOU WIN");
-       add(win);
-    }
-    
-     // Bottom Section are Losing Seqeunces for the player sequences   
-    if (intro == 1 && roll == 2){
-       println  ("YOU LOSE");
-       add(lose);
-    }
-    
-    if (intro == 2 && roll == 3){
-       println ("YOU LOSE");
-       add(lose);
-    }
-    
-    if (intro == 3 && roll == 1){
-       println ("YOU LOSE"); 
-       add(lose);
-    }
-    
-    //Fire to earth
-    if (intro == 2 && roll == 1){
-        println ("YOU WIN");
+       add(fire);
+        remove(dirt);
     }
     
     //Water to fire
@@ -78,7 +66,11 @@ function start (){
     if (intro == 3 && roll == 1){
        println ("YOU LOSE"); 
     }
+    
+    
+  
 }
+
 
 // All functions for displaying pictures.
 // Code is very long, but can probably be simplified.
