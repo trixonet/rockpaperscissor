@@ -12,7 +12,7 @@ water.setPosition(250, 35);
 
 var vs = new WebImage ("https://codehs.com/uploads/21c7424c0aff710693860c35917a04dd");
 
-
+ 
 
 function start (){
     println ("1. Earth");
