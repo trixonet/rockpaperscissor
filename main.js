@@ -1,18 +1,4 @@
-var dirt = new WebImage("https://codehs.com/uploads/5c5b03e5830f4a1db397f2503291cfdd");
-dirt.setSize(138, 175);
-dirt.setPosition(20, 35);
-
-var fire = new WebImage("https://codehs.com/uploads/01b7bc8d1f78f61f0e107d69c68f4760");
-fire.setSize(138, 175);
-fire.setPosition(0, 35);
-
-var water = new WebImage("https://codehs.com/uploads/229bfa3a8677c3aa6e7d165abd870547");
-water.setSize(110, 155);
-water.setPosition(250, 35);
-
-var vs = new WebImage ("https://codehs.com/uploads/21c7424c0aff710693860c35917a04dd");
-
- 
+// var win = new WebImage 
 
 function start (){
     println ("1. Earth");
@@ -31,6 +17,7 @@ function start (){
     //Tie both numbers (player and computer)
     if (intro == roll){
         println ("TIE");
+        gameTieDirtPic();
     }
     
     //Earth to water
@@ -71,11 +58,51 @@ function start (){
   
 }
 
+function gameTieDirtPic(){
+    var dirt = new WebImage("https://codehs.com/uploads/5c5b03e5830f4a1db397f2503291cfdd");
+    dirt.setSize(138, 175);
+    dirt.setPosition(20, 35);
+
+    var fire = new WebImage("https://codehs.com/uploads/01b7bc8d1f78f61f0e107d69c68f4760");
+    fire.setSize(138, 175);
+    fire.setPosition(0, 35);
+
+    var water = new WebImage("https://codehs.com/uploads/229bfa3a8677c3aa6e7d165abd870547");
+    water.setSize(110, 155);
+    water.setPosition(250, 35);
+     
+     add(dirt); 
+     remove(fire);
+     add(water);
+}
+
+function earthToWaterPic(){
+    var dirt = new WebImage("https://codehs.com/uploads/5c5b03e5830f4a1db397f2503291cfdd");
+    dirt.setSize(138, 175);
+    dirt.setPosition(20, 35);
+
+    var fire = new WebImage("https://codehs.com/uploads/01b7bc8d1f78f61f0e107d69c68f4760");
+    fire.setSize(138, 175);
+    fire.setPosition(0, 35);
+
+    var water = new WebImage("https://codehs.com/uploads/229bfa3a8677c3aa6e7d165abd870547");
+    water.setSize(110, 155);
+    water.setPosition(250, 35);
+     
+     add(dirt); 
+     remove(fire);
+     add(water);
+}
+
+function 
+
+
+
 
 // All functions for displaying pictures.
 // Code is very long, but can probably be simplified.
 
-function gameTie(){
+/* function gameTie(){
     dirt.setSize(200, 200);
     dirt.setPosition (getWidth()/2 , getHeight()/2);
     add(dirt);
@@ -90,3 +117,4 @@ function gameTie(){
     rect3.setColor(Color.blue);
     add(rect3);
 }
+*/
