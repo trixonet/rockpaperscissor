@@ -18,6 +18,7 @@ function start (){
     if (intro == 1 && roll == 1){
         println ("TIE");
         gameTieDirtPic();
+
     }
     
     //Tie both numbers for Fire
@@ -30,6 +31,7 @@ function start (){
     if (intro == 3 && roll == 3){
         println("TIE");
         gameTieWaterPic();
+      
     }
     
     //Earth to water
@@ -70,7 +72,9 @@ function start (){
   
 }
 
+
 // tie for dirt pictures
+
 function gameTieDirtPic(){
     var dirt = new WebImage("https://codehs.com/uploads/5c5b03e5830f4a1db397f2503291cfdd");
     dirt.setSize(138, 175);
@@ -88,6 +92,7 @@ function gameTieDirtPic(){
      remove(fire);
      add(water);
 }
+
 
 //tie for fire pictures
 function gameTieFirePic(){
