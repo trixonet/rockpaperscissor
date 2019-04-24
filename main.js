@@ -37,35 +37,38 @@ function start (){
     //Earth to water
     if (intro == 1 && roll == 3){
         println ("YOU WIN");
-        add(dirt); 
-        remove(fire);
-        add(water);
+        earthToWaterPic();
         
     }
     
     //Fire to earth
     if (intro == 2 && roll == 1){
         println ("YOU WIN");
-       add(fire);
-        remove(dirt);
+        fireToEarthPic();
     }
     
     //Water to fire
     if (intro == 3 && roll == 2){
        println  ("YOU WIN");
+       waterToFirePic();
     }
     
      // Bottom Section are Losing Seqeunces for the player sequences   
+     
+    //
     if (intro == 1 && roll == 2){
-       println  ("YOU LOSE"); 
+       println  ("YOU LOSE");
+       loseEarthToFirePic();
     }
     
     if (intro == 2 && roll == 3){
        println ("YOU LOSE");
+       loseFireToWaterPic();
     }
     
     if (intro == 3 && roll == 1){
        println ("YOU LOSE"); 
+       loseWaterToEarth();
     }
     
     
@@ -84,7 +87,7 @@ function gameTieDirtPic(){
     fire.setSize(138, 175);
     fire.setPosition(0, 35);
 
-    var water = new WebImage("https://codehs.com/uploads/229bfa3a8677c3aa6e7d165abd870547");
+    var water = new WebImage("https://codehs.com/uploads/5c5b03e5830f4a1db397f2503291cfdd");
     water.setSize(110, 155);
     water.setPosition(250, 35);
      
@@ -96,7 +99,7 @@ function gameTieDirtPic(){
 
 //tie for fire pictures
 function gameTieFirePic(){
-    var dirt = new WebImage("https://codehs.com/uploads/5c5b03e5830f4a1db397f2503291cfdd");
+    var dirt = new WebImage("https://codehs.com/uploads/01b7bc8d1f78f61f0e107d69c68f4760");
     dirt.setSize(138, 175);
     dirt.setPosition(20, 35);
 
@@ -104,7 +107,7 @@ function gameTieFirePic(){
     fire.setSize(138, 175);
     fire.setPosition(0, 35);
 
-    var water = new WebImage("https://codehs.com/uploads/229bfa3a8677c3aa6e7d165abd870547");
+    var water = new WebImage("https://codehs.com/uploads/01b7bc8d1f78f61f0e107d69c68f4760");
     water.setSize(110, 155);
     water.setPosition(250, 35);
      
@@ -115,7 +118,7 @@ function gameTieFirePic(){
 
 //tie for water pictures
 function gameTieWaterPic(){
-    var dirt = new WebImage("https://codehs.com/uploads/5c5b03e5830f4a1db397f2503291cfdd");
+    var dirt = new WebImage("https://codehs.com/uploads/229bfa3a8677c3aa6e7d165abd870547");
     dirt.setSize(138, 175);
     dirt.setPosition(20, 35);
 
@@ -239,9 +242,6 @@ function loseWaterToEarth(){
      remove(fire);
      add(water);
 }
-
-
-
 
 // All functions for displaying pictures.
 // Code is very long, but can probably be simplified.
