@@ -1,5 +1,5 @@
 # rockpaperscissor
-Rock, Paper, Scissors Elemetal
+Rock, Paper, Scissors Elemental
 
 
 This project is for the AP Computer Science Principles project.
